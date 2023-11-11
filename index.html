@@ -16,6 +16,25 @@
             window.location.href = vCardURL;
         }
     </script>
+    <script type="text/javascript">
+    function logScan() {
+        var xhr = new XMLHttpRequest();
+        var scriptUrl = "https://script.google.com/macros/s/AKfycbxf5CAApuCTdq_ITW_e4mGzwjj2F4d8M40T7JgkEgZrRtIZfyai9NnmGkXq-6Cj-7Aa/exec";
+        var params = "ip=" + encodeURIComponent(userIP) + "&agent=" + encodeURIComponent(navigator.userAgent);
+
+        xhr.open("GET", scriptUrl + "?" + params, true);
+        xhr.send();
+
+        // Optional: handle the response
+        xhr.onload = function() {
+            console.log(xhr.responseText);
+        };
+    }
+
+    // Call the function
+    logScan();
+    </script>
+
 </head>
 <body onload="redirectToVCard()">
     <p>Redirecting to contact...</p>
