@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Robert Duckstein-test
+TEL;TYPE=WORK,VOICE:(+49) 351 321 491 35
+EMAIL;TYPE=PREF,INTERNET:robert.duckstein@manatec.de
+END:VCARD
