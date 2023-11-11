@@ -1,7 +1,25 @@
-<html>
-<head></head>
-<body>
-  hello word
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // Function to handle tracking and redirection
+        function redirectToVCard() {
+            // URL of the vCard file
+            var vCardURL = "test.html";
 
+            // Perform tracking (send a request to your server)
+            // [Insert AJAX call or tracking logic here]
+
+            // Redirect to the vCard file
+            window.location.href = vCardURL;
+        }
+    </script>
+</head>
+<body onload="redirectToVCard()">
+    <p>Redirecting to contact...</p>
+    <!-- Optionally include a manual download link in case automatic redirection fails -->
+    <p>If you are not redirected, <a href="https://yourdomain.com/contact.vcf">click here</a> to download the contact.</p>
+</body>
 </html>
