@@ -16,27 +16,18 @@
             window.location.href = vCardURL;
         }
     </script>
-    <script type="text/javascript">
-    function logScan() {
-        var xhr = new XMLHttpRequest();
-        var scriptUrl = "https://script.google.com/macros/s/AKfycbxf5CAApuCTdq_ITW_e4mGzwjj2F4d8M40T7JgkEgZrRtIZfyai9NnmGkXq-6Cj-7Aa/exec";
-        var params = "ip=" + encodeURIComponent(userIP) + "&agent=" + encodeURIComponent(navigator.userAgent);
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTZLKCGG2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        xhr.open("GET", scriptUrl + "?" + params, true);
-        xhr.send();
-
-        // Optional: handle the response
-        xhr.onload = function() {
-            console.log(xhr.responseText);
-        };
-    }
-
-    // Call the function
-    
-    </script>
+  gtag('config', 'G-TTZLKCGG2B');
+</script>
 
 </head>
-<body onload="logScan(); redirectToVCard();">
+<body onload="redirectToVCard()">
     <p>Redirecting to contact...</p>
     <!-- Optionally include a manual download link in case automatic redirection fails -->
     <p>If you are not redirected, <a href="https://yourdomain.com/contact.vcf">click here</a> to download the contact.</p>
